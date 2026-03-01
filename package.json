@@ -1,0 +1,66 @@
+{
+  "name": "file-renamer",
+  "version": "0.1.0",
+  "description": "Windowsフォルダ内のファイル名を一括変更するデスクトップアプリ",
+  "author": "File Renamer Contributors",
+  "private": true,
+  "type": "module",
+  "main": "./out/main/index.js",
+  "workspaces": [
+    "shared",
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "dev": "concurrently -n client,server -c blue,green \"npm run dev:client\" \"npm run dev:server\"",
+    "dev:client": "npm run dev -w client",
+    "dev:server": "tsx watch server/src/index.ts",
+    "build": "tsc -b",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "electron:dev": "electron-vite dev",
+    "electron:build": "electron-vite build",
+    "electron:preview": "electron-vite preview",
+    "electron:package": "electron-vite build && electron-builder --win",
+    "electron:package:dir": "electron-vite build && electron-builder --win --dir",
+    "electron:installer": "electron-builder --win"
+  },
+  "devDependencies": {
+    "@electron-toolkit/utils": "^4.0.0",
+    "@eslint/js": "^10.0.1",
+    "concurrently": "^9.2.1",
+    "electron": "^40.6.1",
+    "electron-builder": "^26.8.1",
+    "electron-vite": "^5.0.0",
+    "eslint": "^10.0.1",
+    "tsx": "^4.21.0",
+    "typescript": "~5.8.3",
+    "typescript-eslint": "^8.56.1",
+    "vitest": "^3.1.0"
+  },
+  "build": {
+    "appId": "com.file-renamer.app",
+    "productName": "File Renamer",
+    "npmRebuild": false,
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "out/**/*",
+      "package.json"
+    ],
+    "extraResources": [],
+    "win": {
+      "target": ["nsis"],
+      "icon": "resources/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "installerLanguages": ["ja"],
+      "language": "1041"
+    }
+  }
+}

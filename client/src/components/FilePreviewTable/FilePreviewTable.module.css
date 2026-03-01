@@ -1,0 +1,148 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.heading {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.count {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.loading {
+  font-size: 0.8rem;
+  color: var(--color-primary);
+}
+
+.selectionBar {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.selectionButton {
+  padding: 0.2rem 0.5rem;
+  font-size: 0.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+}
+
+.selectionButton:hover:not(:disabled) {
+  background: var(--color-bg-hover);
+}
+
+.selectionButton:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.tableWrapper {
+  max-height: 500px;
+  overflow-y: auto;
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-md);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.th {
+  text-align: left;
+  padding: 0.5rem 0.75rem;
+  background: var(--color-bg-muted);
+  border-bottom: 2px solid var(--color-border-light);
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  position: sticky;
+  top: 0;
+}
+
+.thCheck {
+  width: 2rem;
+  text-align: center;
+  padding: 0.5rem 0;
+  background: var(--color-bg-muted);
+  border-bottom: 2px solid var(--color-border-light);
+  position: sticky;
+  top: 0;
+}
+
+.thArrow {
+  width: 2rem;
+  text-align: center;
+  padding: 0.5rem 0;
+  background: var(--color-bg-muted);
+  border-bottom: 2px solid var(--color-border-light);
+  position: sticky;
+  top: 0;
+}
+
+.td {
+  padding: 0.4rem 0.75rem;
+  border-bottom: 1px solid var(--color-border-lighter);
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+}
+
+.tdArrow {
+  text-align: center;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid var(--color-border-lighter);
+  color: #888;
+}
+
+.tdCheck {
+  text-align: center;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid var(--color-border-lighter);
+}
+
+.rowUnchanged {
+  color: var(--color-text-muted);
+}
+
+.rowDeselected {
+  color: var(--color-text-muted);
+  opacity: 0.5;
+}
+
+.rowChanged {
+  background-color: var(--color-primary-bg);
+}
+
+.rowCollision {
+  background-color: var(--color-danger-bg);
+}
+
+.collision {
+  margin-left: 0.4rem;
+  color: var(--color-danger);
+  cursor: help;
+}
+
+.empty {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 3rem 1rem;
+  border: 1px dashed var(--color-border-light);
+  border-radius: var(--radius-md);
+}

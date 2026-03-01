@@ -1,0 +1,43 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+*.tsbuildinfo
+
+# Electron build output
+out/
+release/
+
+# TypeScript declaration maps
+*.d.ts.map
+
+# Server data (journals, presets)
+server/data/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test
+coverage/
+
+# Lint / Format cache
+.eslintcache
+
+# Claude Code
+CLAUDE.local.md
+
+# npm
+npm-debug.log*

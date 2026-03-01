@@ -1,0 +1,31 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "mcp__context7__resolve-library-id",
+      "mcp__context7__query-docs",
+      "WebFetch(domain:www.claude.com)",
+      "WebFetch(domain:www.humanlayer.dev)",
+      "Bash(test:*)",
+      "Bash(npm view express@4 version 2>/dev/null && npm view cors version 2>/dev/null && npm view zod version 2>/dev/null && npm view tsx version 2>/dev/null && npm view concurrently version 2>/dev/null)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(npm view:*)",
+      "Bash(npm run:*)",
+      "Bash(npm test:*)",
+      "Bash(npx vitest:*)",
+      "mcp__codex__codex",
+      "Bash(head:*)",
+      "Bash(curl:*)",
+      "Bash(lsof:*)",
+      "WebFetch(domain:v2.tauri.app)",
+      "WebFetch(domain:www.electronjs.org)",
+      "WebFetch(domain:releases.electronjs.org)",
+      "WebFetch(domain:dev.to)",
+      "WebFetch(domain:www.npmjs.com)",
+      "Bash(tail:*)",
+      "Bash(python3:*)",
+      "Bash(node:*)",
+      "Bash(powershell.exe:*)"
+    ]
+  }
+}
