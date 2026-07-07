@@ -99,7 +99,7 @@ npm run dev
 
 Node.js のインストールは不要です。
 
-1. [GitHub Releases](https://github.com/rm007080/10_file-editor/releases/latest) から `File.Renamer.Setup.0.1.0.exe` をダウンロード
+1. [GitHub Releases](https://github.com/rm007080/10_file-editor/releases/latest) から `File.Renamer.Setup.0.1.1.exe` をダウンロード
 2. ダブルクリックしてインストーラーを実行
 3. **SmartScreen 警告が表示された場合**: 「詳細情報」→「実行」をクリック（コード署名なしのため表示されます）
 4. インストール先を選択して「インストール」

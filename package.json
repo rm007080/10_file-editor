@@ -1,6 +1,6 @@
 {
   "name": "file-renamer",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Windowsフォルダ内のファイル名を一括変更するデスクトップアプリ",
   "author": "File Renamer Contributors",
   "private": true,
