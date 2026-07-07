@@ -40,8 +40,9 @@ export async function listFiles(
     // Skip directories, only include files
     if (!entry.isFile()) continue;
 
-    // Skip hidden files (starting with .)
+    // Skip hidden files (dot) and Office owner/lock files (~$)
     if (entry.name.startsWith('.')) continue;
+    if (entry.name.startsWith('~$')) continue;
 
     // Extension filter
     if (extFilter) {

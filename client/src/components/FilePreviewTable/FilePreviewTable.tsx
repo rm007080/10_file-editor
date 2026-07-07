@@ -5,20 +5,24 @@ interface FilePreviewTableProps {
   files: FileEntry[];
   previewResults: PreviewResult[];
   isLoading: boolean;
+  isRefreshing?: boolean;
   selectedFiles: string[];
   onToggleFile: (fileName: string) => void;
   onSelectAll: () => void;
   onDeselectAll: () => void;
+  onRefresh: () => void;
 }
 
 export function FilePreviewTable({
   files,
   previewResults,
   isLoading,
+  isRefreshing = false,
   selectedFiles,
   onToggleFile,
   onSelectAll,
   onDeselectAll,
+  onRefresh,
 }: FilePreviewTableProps) {
   const hasPreview = previewResults.length > 0;
   const changedCount = previewResults.filter((r) => r.hasChanged).length;
@@ -46,6 +50,13 @@ export function FilePreviewTable({
         </button>
         <button className={styles.selectionButton} onClick={onDeselectAll} disabled={noneSelected}>
           全解除
+        </button>
+        <button
+          className={styles.selectionButton}
+          onClick={onRefresh}
+          disabled={isRefreshing}
+        >
+          {isRefreshing ? '更新中...' : '更新'}
         </button>
       </div>
       <div className={styles.tableWrapper}>

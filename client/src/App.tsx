@@ -228,10 +228,16 @@ function App() {
                 files={files}
                 previewResults={results}
                 isLoading={previewLoading}
+                isRefreshing={filesLoading}
                 selectedFiles={activeFiles}
                 onToggleFile={handleToggleFile}
                 onSelectAll={handleSelectAll}
                 onDeselectAll={handleDeselectAll}
+                onRefresh={() => {
+                  if (directoryPath) {
+                    loadFiles(directoryPath);
+                  }
+                }}
               />
             </div>
           </div>
